@@ -2,4 +2,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #030609;
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #303749;
 }

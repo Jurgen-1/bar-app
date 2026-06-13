@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+.table {
+  font-size: 20px;
+  color: #FF8D28;
+  background-color: #FEF1ED;
+  padding: 12px 16px 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
