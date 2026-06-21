@@ -49,7 +49,7 @@ function renderMenuItem(menuItem) {
 
     menuItemName.innerText = menuItem.name
     menuItemDescription.innerText = menuItem.description
-    menuItemPrice.innerText = menuItem.price
+    menuItemPrice.innerText = `ALL ${menuItem.price}`
 
     return node
 }
