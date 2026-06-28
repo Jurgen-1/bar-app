@@ -1,3 +1,4 @@
+```javascript
 const cat = {
     name: "Pussic"
 }
@@ -48,3 +49,5 @@ const book = {
     title: "The Hobbit",
     genreIds: [1, 2, 3],
 }
+
+```
