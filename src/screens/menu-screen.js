@@ -1,10 +1,12 @@
 import  "./menu-screen.css";
 import {state} from "../state";
+import {render} from "../render";
 
 const app = document.querySelector("#app");
 
 export function renderMenuScreen () {
     renderHeader()
+    renderMenuFilters()
     renderMenuItems()
 }
 
@@ -13,6 +15,36 @@ function renderHeader () {
     const node = template.content.cloneNode(true);
     app.appendChild(node);
 }
+
+function renderMenuFilters () {
+    const container = document.createElement("div");
+    container.classList.add("filters");
+
+    state.filterCategories.forEach((category)=> {
+        const rendered = renderMenuFilter(category);
+        container.appendChild(rendered)
+    })
+
+    app.appendChild(container);
+}
+
+function renderMenuFilter(category) {
+    const button = document.createElement("button");
+    button.classList.add("filter")
+    button.innerText = category.name
+
+    if (category.id === state.currentFilterId) {
+        button.classList.add("selected")
+    }
+
+    button.addEventListener("click", () => {
+        state.currentFilterId = category.id
+
+        render();
+    })
+
+    return button
+} 
 
 function renderMenuItems () {
     const container = document.createElement("div");
@@ -31,10 +63,28 @@ function renderMenuItems () {
     // container.appendChild(rendered2);
 
     
-    state.menuItems.forEach((menuItem)=> {
-        const rendered = renderMenuItem(menuItem)
-        container.appendChild(rendered)
-    }) 
+    // state.menuItems.forEach((menuItem) => {
+
+    //     if (
+    //         menuItem.categoryIds.includes(state.currentFilterId)
+    //         || state.currentFilterId === 1
+    //     ) {
+    //         const rendered = renderMenuItem(menuItem)
+    //         container.appendChild(rendered)
+    //     }
+
+    // })
+    
+    state
+        .menuItems
+        .filter((item) => {
+            return item.categoryIds.includes(state.currentFilterId)
+                || state.currentFilterId === 1
+        })
+        .forEach((menuItem) => {
+            const rendered = renderMenuItem(menuItem)
+            container.appendChild(rendered)
+        })
     
     app.appendChild(container);
 }

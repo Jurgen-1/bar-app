@@ -1,13 +1,40 @@
+
+const filterCategories = [
+    {
+        id: 1,
+        name: "All"
+    },
+    {
+        id: 2,
+        name: "Food"
+    },
+    {
+        id: 3,
+        name: "Drinks"
+    },
+    {
+        id: 4,
+        name: "Snacks"
+    },
+    {
+        id: 5,
+        name: "Special"
+    }
+];
+
+
 export const state = {
     currentScreen: "MENU",
+    currentFilterId: 3,
+    filterCategories,
     menuItems: [
         {
             id: 1,
             name: "Rizoto me Perime",
             description: "Karrot, Kungull, Domate",
             price: 800,
-            image: ""
-
+            image: "",
+            categoryIds: [2]
         },
         {
 
@@ -15,7 +42,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [2]
 
         },
 
@@ -29,7 +57,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3]
 
         },
 
@@ -39,7 +68,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3]
 
         },
 
@@ -49,7 +79,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3]
 
         },
 
@@ -59,7 +90,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3]
 
         },
 
@@ -69,7 +101,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3]
 
         },
 
@@ -79,7 +112,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3]
 
         },
         {
@@ -88,7 +122,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3]
 
         },
         {
@@ -97,7 +132,8 @@ export const state = {
             name: "Rizoto me Fruta Deti",
             description: "Midhje, Karkalec, Kallamar",
             price: 950,
-            image: ""
+            image: "",
+            categoryIds: [3, 5]
 
         },
     ]

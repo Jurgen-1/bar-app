@@ -24,3 +24,7 @@ h2 {
 #app {
   margin: 10px;
 }
+
+button {
+  all: unset;
+}

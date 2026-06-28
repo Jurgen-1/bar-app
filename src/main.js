@@ -1,38 +1,8 @@
 import "./style.css";
-import {renderMenuScreen} from "./screens/menu-screen";
-import { renderOrderScreen } from "./screens/order-screen";
-import { renderConfirmScreen } from "./screens/confirm-screen";
 
-import {state} from "./state";
+
+import {render} from "./render";
 
 const app = document.querySelector("#app");
-
-function render() {
-    app.innerHTML = "";
-
-    if (state.currentScreen === "MENU") {
-        renderMenuScreen()
-    }
-
-    if (state.currentScreen === "ORDER") {
-        renderOrderScreen()
-    }
-
-    if (state.currentScreen === "CONFIRM") {
-        renderConfirmScreen()
-    }
-
-    // switch (state.currentScreen) {
-    //     case "MENU":
-    //         renderMenuScreen();
-    //         return;
-    //     case "ORDER":
-    //         renderOrderScreen();
-    //         return;
-    //     case "CONFIRM":
-    //         renderConfirmScreen();
-    //         return;
-    // }
-}
 
 render()
