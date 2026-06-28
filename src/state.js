@@ -1,28 +1,5 @@
-import { menuItems } from "./menu-items";
-
-const filterCategories = [
-    {
-        id: 1,
-        name: "All"
-    },
-    {
-        id: 2,
-        name: "Food"
-    },
-    {
-        id: 3,
-        name: "Drinks"
-    },
-    {
-        id: 4,
-        name: "Snacks"
-    },
-    {
-        id: 5,
-        name: "Special"
-    }
-];
-
+import { filterCategories } from "./data/filter-categories";
+import { menuItems } from "./data/menu-items";
 
 export const state = {
     currentScreen: "MENU",
