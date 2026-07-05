@@ -5,5 +5,6 @@ export const state = {
     currentScreen: "MENU",
     currentFilterId: 1,
     filterCategories,
-    menuItems
+    menuItems,
+    orderedItems: {}, // Keys are menu item ids, values are amount 
 }

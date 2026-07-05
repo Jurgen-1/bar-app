@@ -1,26 +1,27 @@
-import  "./menu-screen.css";
-import {state} from "../state";
-import {render} from "../render";
+import "./menu-screen.css";
+import { state } from "../state";
+import { render } from "../render";
 
 const app = document.querySelector("#app");
 
-export function renderMenuScreen () {
+export function renderMenuScreen() {
     renderHeader()
     renderMenuFilters()
     renderMenuItems()
+    renderOrderPanel()
 }
 
-function renderHeader () {
+function renderHeader() {
     const template = document.querySelector("#menu-header-template");
     const node = template.content.cloneNode(true);
     app.appendChild(node);
 }
 
-function renderMenuFilters () {
+function renderMenuFilters() {
     const container = document.createElement("div");
     container.classList.add("filters");
 
-    state.filterCategories.forEach((category)=> {
+    state.filterCategories.forEach((category) => {
         const rendered = renderMenuFilter(category);
         container.appendChild(rendered)
     })
@@ -44,9 +45,9 @@ function renderMenuFilter(category) {
     })
 
     return button
-} 
+}
 
-function renderMenuItems () {
+function renderMenuItems() {
     const container = document.createElement("div");
     container.classList.add("menu-items")
 
@@ -62,7 +63,7 @@ function renderMenuItems () {
     // const rendered2 = renderMenuItem(menuItem2);
     // container.appendChild(rendered2);
 
-    
+
     // state.menuItems.forEach((menuItem) => {
 
     //     if (
@@ -74,7 +75,7 @@ function renderMenuItems () {
     //     }
 
     // })
-    
+
     state
         .menuItems
         .filter((item) => {
@@ -85,7 +86,7 @@ function renderMenuItems () {
             const rendered = renderMenuItem(menuItem)
             container.appendChild(rendered)
         })
-    
+
     app.appendChild(container);
 }
 
@@ -96,10 +97,67 @@ function renderMenuItem(menuItem) {
     const menuItemName = node.querySelector(".menu-item-name")
     const menuItemDescription = node.querySelector(".menu-item-description")
     const menuItemPrice = node.querySelector(".menu-item-price")
+    const menuAddButton = node.querySelector(".menu-item-button")
 
     menuItemName.innerText = menuItem.name
     menuItemDescription.innerText = menuItem.description
     menuItemPrice.innerText = `ALL ${menuItem.price}`
 
+    menuAddButton.addEventListener("click", () => {
+        if (state.orderedItems[menuItem.id]) {
+            state.orderedItems[menuItem.id] = state.orderedItems[menuItem.id] + 1
+        } else {
+            state.orderedItems[menuItem.id] = 1;
+        }
+
+        render();
+    })
+
+
     return node
 }
+
+
+function renderOrderPanel() {
+    const template = document.querySelector("#order-panel-template");
+    const node = template.content.cloneNode(true);
+
+    const itemsAmount = node.querySelector(".items-amount")
+    const itemsPrice = node.querySelector(".items-price")
+
+    // itemsAmount.innerText = " big tittez"
+
+    const itemAmounts = Object.values(state.orderedItems)
+    console.log(itemAmounts)
+
+    let sum = 0 
+    itemAmounts.forEach ((amount) =>{
+        sum = sum + amount
+    }) 
+
+    console.log(sum)
+
+    // itemsAmount.innerText = "Items: " + sum
+    itemsAmount.innerText = `Items: ${sum}`
+
+    let total = 0;
+
+    Object.keys(state.orderedItems)
+        .forEach((menuItemId) => {
+            const menuItem = state.menuItems.find((menuItem) => {
+                return menuItem.id === parseInt(menuItemId, 10);
+                // return menuItem.id === +menuItemId
+            })
+
+            const price = menuItem.price;
+
+            total = total + price * state.orderedItems[menuItemId];
+        })
+
+    itemsPrice.innerText = `ALL ${total}`
+
+
+    app.appendChild(node);
+
+}
+
