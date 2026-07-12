@@ -1,5 +1,6 @@
 import { state } from "../../state";
 import { render } from "../../render";
+import { calculateTotalPrice } from "../../helpers/calculation";
 
 export function renderOrderPanel() {
     const template = document.querySelector("#order-panel-template");
@@ -19,19 +20,7 @@ export function renderOrderPanel() {
     // itemsAmount.innerText = "Items: " + sum
     itemsAmount.innerText = `Items: ${sum}`
 
-    let total = 0;
-
-    Object.keys(state.orderedItems)
-        .forEach((menuItemId) => {
-            const menuItem = state.menuItems.find((menuItem) => {
-                return menuItem.id === parseInt(menuItemId, 10);
-                // return menuItem.id === +menuItemId
-            })
-
-            const price = menuItem.price;
-
-            total = total + price * state.orderedItems[menuItemId];
-        })
+    const total = calculateTotalPrice();
 
     itemsPrice.innerText = `ALL ${total}`
         
@@ -45,3 +34,4 @@ export function renderOrderPanel() {
 
     app.appendChild(node);
 }
+
