@@ -119,18 +119,3 @@
 }
 
 
-.order-button {
-    flex-grow: 1;
-    background-color: #FF8D28;
-    color: white;
-    border-radius: 12px;
-    padding: 16px 18px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.order-button:hover {
-    background-color: #af6321;
-}

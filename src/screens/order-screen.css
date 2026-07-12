@@ -1,0 +1,6 @@
+.order-screen-button-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+

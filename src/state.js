@@ -2,7 +2,7 @@ import { filterCategories } from "./data/filter-categories";
 import { menuItems } from "./data/menu-items";
 
 export const state = {
-    currentScreen: "MENU",
+    currentScreen: "ORDER", // "MENU" | "ORDER" | "CONFIRM"
     currentFilterId: 1,
     filterCategories,
     menuItems,

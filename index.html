@@ -10,23 +10,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <template id="order-screen-panel">
+    <div class="order-screen-button-panel">
+      <button class="order-now-button button center">
+        Order now
+      </button>
+      <button class="back-button button-secondary center">
+        Back to Menu
+      </button>
+    </div>
+    </template>
 
-    <!-- <template id="filters-template">
-      <div class="filters">
-        <button class="filter ">
-          All
-        </button>
-        <button class="filter">
-          Food
-        </button>
-        <button class="filter selected">
-          Drinks
-        </button>
-      </div>
-    </template> -->
+    <div id="app"></div>
+
+    <!-- ==========================
+    Templates
+    ========================== -->
+
     <template id="order-panel-template">
       <div class="order-panel">
-        <button class="order-button">
+        <button class="order-button button">
           <div class="items-amount">
             Items
           </div>
@@ -39,9 +42,6 @@
         </button>
       </div>
     </template>
-    <div id="app"></div>
-
-
 
     <template id="menu-item-template">
       <div class="menu-item">
