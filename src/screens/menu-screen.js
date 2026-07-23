@@ -1,7 +1,7 @@
 import "./menu-screen.css";
 import { state } from "../state";
 import { render } from "../render";
-import { renderHeader } from "./components/header";
+import { renderMenuHeader } from "./components/menu-header";
 import { renderMenuFilters } from "./components/filters";
 import { renderMenuItems } from "./components/menu-items-list";
 import { renderOrderPanel } from "./components/order-panel";
@@ -9,7 +9,7 @@ import { renderOrderPanel } from "./components/order-panel";
 const app = document.querySelector("#app");
 
 export function renderMenuScreen() {
-    renderHeader()
+    renderMenuHeader()
     renderMenuFilters()
     renderMenuItems()
     renderOrderPanel()

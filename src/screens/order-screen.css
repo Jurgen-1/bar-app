@@ -39,3 +39,25 @@
     font-weight: 600;
     color: #FF8D28;
 }
+
+.order-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 10px;
+}
+
+.header-back-button {
+    padding: 12px;
+}
+
+.order-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.order-table {
+    color: #FF8D28;
+    font-weight: 600;
+}
