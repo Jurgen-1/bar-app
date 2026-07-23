@@ -10,15 +10,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <template id="order-screen-panel">
-    <div class="order-screen-button-panel">
-      <button class="order-now-button button center">
-        Order now
-      </button>
-      <button class="back-button button-secondary center">
-        Back to Menu
-      </button>
-    </div>
+
+    <template id="order-item-template">
+      <div class="menu-item">
+        <div class="menu-item-image-container">
+          <img class="menu-item-image" src="/rizoto.jpg" alt="">
+        </div>
+        <div class="menu-item-info">
+          <div class="menu-item-name">dfghdfgh</div>
+          <div class="menu-item-price order-item-price">ALL 123</div>
+          <div class="order-amount-controls">
+            <button class="menu-item-button order-decrement">-</button>
+            <div class="order-item-amount">
+              1
+            </div>
+            <button class="menu-item-button order-increment">+</button>
+          </div>
+        </div>
+        <button class="menu-item-button order-item-delete">
+          <img src="/trash.svg" alt="">
+        </button>
+      </div>
     </template>
 
     <div id="app"></div>
@@ -26,6 +38,19 @@
     <!-- ==========================
     Templates
     ========================== -->
+
+    <!-- --- Order screen --- -->
+
+    <template id="order-screen-panel">
+      <div class="order-screen-button-panel">
+        <button class="order-now-button button center">
+          Order now
+        </button>
+        <button class="back-button button-secondary center">
+          Back to Menu
+        </button>
+      </div>
+    </template>
 
     <template id="order-panel-template">
       <div class="order-panel">
@@ -42,6 +67,8 @@
         </button>
       </div>
     </template>
+
+    <!-- --- Menu screen --- -->
 
     <template id="menu-item-template">
       <div class="menu-item">

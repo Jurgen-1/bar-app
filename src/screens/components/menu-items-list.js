@@ -1,6 +1,8 @@
 import { state } from "../../state";
 import { render } from "../../render";
 
+const app = document.querySelector("#app");
+
 export function renderMenuItems() {
     const container = document.createElement("div");
     container.classList.add("menu-items")

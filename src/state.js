@@ -6,5 +6,7 @@ export const state = {
     currentFilterId: 1,
     filterCategories,
     menuItems,
-    orderedItems: {}, // Keys are menu item ids, values are amount 
+    orderedItems: {
+        2: 1
+    }, // Keys are menu item ids, values are amount 
 }
