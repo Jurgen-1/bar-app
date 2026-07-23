@@ -1,18 +1,18 @@
 export const menuItems = [
     {
         id: 1,
-        name: "Rizoto me Perime",
-        description: "Karrot, Kungull, Domate",
-        price: 800,
+        name: "Sallat Greke",
+        description: "Qep, Kastravec, Domate, Djath Bardh",
+        price: 550,
         image: "",
         categoryIds: [2]
     },
     {
 
         id: 2,
-        name: "Rizoto me Fruta Deti",
-        description: "Midhje, Karkalec, Kallamar",
-        price: 950,
+        name: "Sup Peshku",
+        description: "Perime, Peshk, Erza",
+        price: 400,
         image: "",
         categoryIds: [2]
 
@@ -25,9 +25,9 @@ export const menuItems = [
     {
 
         id: 3,
-        name: "Rizoto me Fruta Deti",
+        name: "Linguini me Fruta Deti",
         description: "Midhje, Karkalec, Kallamar",
-        price: 950,
+        price: 850,
         image: "",
         categoryIds: [3]
 
@@ -36,8 +36,8 @@ export const menuItems = [
     {
 
         id: 4,
-        name: "Rizoto me Fruta Deti",
-        description: "Midhje, Karkalec, Kallamar",
+        name: "Paidhaqe me Garnitur",
+        description: "Patate, Sallat Jeshile, Kechup",
         price: 950,
         image: "",
         categoryIds: [3]
