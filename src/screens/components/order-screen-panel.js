@@ -11,6 +11,11 @@ export function renderOrderScreenButtonsPanel () {
         render()
     })
 
+    const orderButton = node.querySelector(".order-now-button")
+    orderButton.addEventListener("click", () => {
+        state.currentScreen = "CONFIRM"
+        render()
+    })
     app.appendChild(node);
 }
 

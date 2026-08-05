@@ -4,12 +4,40 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>bar-app</title>
+    <title>Jurgen's Bar App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+
+    <template id="confirm-screen-template">
+      <div class="confirmation-screen">
+        <div class="confirmation-panel">
+          <div class="confirm-image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-78.46 -39.442 18.923 13.356"><path fill="white" d="m-59.546-38.314.009-.13-.009-.13-.026-.128-.042-.124-.058-.117-.073-.109-.087-.098-.098-.086-.11-.072-.118-.058-.124-.042-.129-.026-.131-.008-.131.008-.129.026-.125.042-.118.058-.109.072-.044.038-.009-.009L-71.5-28.914l-5.22-5.22-.024-.027-.023-.02-.026-.026-.002.002-.048-.042-.109-.072-.118-.058-.125-.042-.129-.025-.131-.009-.131.009-.129.025-.124.042-.118.058-.11.072-.098.086-.087.098-.073.109-.058.117-.043.124-.025.128-.009.13.009.13.025.128.043.124.058.117.073.108.047.053-.002.002.034.034.008.009.008.007 6.657 6.657 11.561-11.561.009-.006.098-.086.087-.098.073-.108.058-.117.042-.124z"/></svg>
+          </div>
+          <div class="confirmation-message">
+            <h1>
+              Order sent!
+            </h1>
+            <div>
+              Your order was sent to the bar staff.
+            </div>
+          </div>
+
+          <div class="confirmation-info">
+            <div class="confirmation-info-row">Table <span>7</span></div>
+            <div class="confirmation-info-row">Total <span class="confirmation-total-price">ALL 100500</span></div>
+          </div>
+        </div>
+
+        <button class="button new-order-button">
+          Start new order
+        </button>
+
+      </div>
+    </template>
 
     <template id="order-item-template">
       <div class="menu-item">

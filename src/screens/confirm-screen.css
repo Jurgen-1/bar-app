@@ -1,0 +1,76 @@
+.confirmation-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    height: 100%;
+}
+
+.confirmation-panel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 36px;
+    padding-top: 64px;
+}
+
+.confirmation-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.confirmation-info {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #dadada;
+    border-radius: 10px;
+
+    background-color: #f5f5f5;
+
+    padding: 10px 16px;
+
+    min-width: 75%;
+
+    gap: 8px;
+}
+
+.confirmation-info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmation-info-row > span {
+    font-weight: 600;
+}
+
+.new-order-button {
+    background-color: rgb(47, 160, 47);
+    width: 100%;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    margin: 96px 0;
+}
+
+.confirm-image {
+    border-radius: 50%;
+    background-color: rgb(47, 160, 47);
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-image > svg {
+    width: 50%;
+}
