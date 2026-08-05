@@ -15,6 +15,7 @@ export function renderConfirmScreen () {
     const backButton = node.querySelector(".new-order-button")
     backButton.addEventListener("click", () => {
         state.currentScreen = "MENU"
+        state.orderedItems = {}
         render()
     })
 
